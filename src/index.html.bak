@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" type="module"></script>
   </head>
   <body>
-    
     <header>
       <h1> COLDPLAY </h1>
       <h3> en Perú</h3>
@@ -25,15 +23,18 @@
            
            <h3>14 de Febreo 2022</h3>
            <h3>8:00pm</h3>
-           <button onclick= "eventSecondPage();" >Comprar entrada </button>
+           <button onclick="eventSecondPage()">Comprar entrada </button>
        </main>
 
        <footer></footer>
     </section>
 
-  
+  </br>
+</br>
+</br>
 
-    <section id="secondPage" style="display: none;">
+
+    <section id="secondPage">
       <h1>MusicBank</h1>
       <main> 
         <input placeholder="Ingresa tu nombre , por favor">
@@ -53,6 +54,27 @@
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js" ></script>
   </body>
 </html>
