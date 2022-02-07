@@ -17,7 +17,7 @@ const validator = {
 
     }
 
-    // multiplicar x2 los numeros pares  y sumen  cada numero que sea mayor a 10 
+    // multiplicar x2 los numeros en posiciones pares  y se sumen los digitos de los números mayores a 10 
     function applyLogicForEvenNumbers(input) {
       let inputAsString = input.toString();
       let result = "";
@@ -57,7 +57,7 @@ const validator = {
       return sumatoria;
     }
 
-    //llamando funciones por le enlist
+    //llamando funciones para capturar el resultado de las funciones
     var reversedNumber = reverseNumber(creditCardNumber);
     var encodedNumber = applyLogicForEvenNumbers(reversedNumber);
     var sumatoriaCifras = getSummOfNumbers(encodedNumber);
@@ -92,14 +92,14 @@ const validator = {
             maskifyInput = maskifyInput + "#";
           }
         }
+
         return maskifyInput;
       }
+
     }
+    
 
-    console.log("testing with < 4 characters :  " + maskify("1"));
-    console.log("testing with > 4 characters:  " + maskify("4083952015263"));
-    console.log("testing :  " + maskify("helloworld"));
-
+    return maskify(creditCardNumber);
 
 
   },
