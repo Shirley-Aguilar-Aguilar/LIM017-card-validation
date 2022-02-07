@@ -1,18 +1,20 @@
 const validator = {
 
+  // ALGORITMO DE LUHN
+
   isValid: function (creditCardNumber) {
     // pasar número en array en orden inverso
     function reverseNumber(input) {
       let inputAsString = input.toString();
       let result = "";
 
-      for (var i = inputAsString.length - 1; i >= 0; i--) {
+      for (let i = inputAsString.length - 1; i >= 0; i--) {
         var digitoAuxiliar = inputAsString[i];
         result = result + digitoAuxiliar;
         console.log(result);
       }
       return parseInt(result);
-      
+
     }
 
     // multiplicar x2 los numeros pares  y sumen  cada numero que sea mayor a 10 
@@ -20,16 +22,16 @@ const validator = {
       let inputAsString = input.toString();
       let result = "";
 
-      var outputAuxCifra = digitoAuxiliar;
-      for (var i = 0; i <= inputAsString.length-1 ; i++) {
+      var outputAuxCifra = 0;
+      for (var i = 0; i <= inputAsString.length - 1; i++) {
         var digitoAuxiliar = parseInt(inputAsString[i]);
-         outputAuxCifra = digitoAuxiliar;
-    
-         //encontrar los números en las posiciones pares
-        if (i % 2 !== 0) { 
-          //console.log("inputAsString[i] tiene posición par y  su valor es: " + digitoAuxiliar);
+        outputAuxCifra = digitoAuxiliar;
+
+        //encontrar los números en las posiciones pares
+        if (i % 2 !== 0) {
+          console.log("inputAsString[i] tiene posición par y  su valor es: " + digitoAuxiliar);
           var doubleNumber = digitoAuxiliar * 2; // multiplicar los pares
-          //console.log("digitouxiliar multiplicado *2 es: " + doubleNumber);
+          console.log("digitouxiliar multiplicado *2 es: " + doubleNumber);
 
           //sumar los digitos multiplicados mayores a 10
           if (doubleNumber >= 10) {
@@ -51,7 +53,7 @@ const validator = {
       for (var i = 0; i <= inputAsString.length - 1; i++) {
         sumatoria = sumatoria + parseInt(inputAsString[i]);
       }
-
+    
       return sumatoria;
     }
 
@@ -64,27 +66,45 @@ const validator = {
     //validar suma total
     var finalResult = sumatoriaCifras % 10 === 0;
     console.log(finalResult);
-    
+
     return finalResult;
   },
 
 
+  // OCULTAR TODOS LOS INDICES MENOS LOS 4 ÚTIMOS .
 
+  maskify: function (creditCardNumber) {
+    function maskify(input) {
+      let inputAsString = input.toString();
+      const SIZE_OF_VISIBLE_NUMBERS = 4;
 
-  maskify: function () {
-   
+      if (inputAsString.length <= SIZE_OF_VISIBLE_NUMBERS) {
+        //retorna el valor sin ningun cambio
+      
+        return inputAsString;
+      } else {
+        let maskifyInput = "";
+
+        for (let i = 0; i <= inputAsString.length - 1; i++) {
+          if (inputAsString.length - i <= SIZE_OF_VISIBLE_NUMBERS) {
+            maskifyInput = maskifyInput + inputAsString[i];
+          } else {
+            maskifyInput = maskifyInput + "#";
+          }
+        }
+        return maskifyInput;
+      }
+    }
+
+    console.log("testing with < 4 characters :  " + maskify("1"));
+    console.log("testing with > 4 characters:  " + maskify("4083952015263"));
+    console.log("testing :  " + maskify("helloworld"));
+
 
 
   },
-  
 
 
 };
 
 export default validator;
-
-
-
-/*validator.isValid(creditCardNumber): creditCardNumber es un string con el número de tarjeta que se va a verificar. Esta función debe retornar un boolean dependiendo si es válida de acuerdo al algoritmo de Luhn.
-
-validator.maskify(creditCardNumber): creditCardNumber es un string con el número de tarjeta y esta función debe retornar un string donde todos menos los últimos cuatro caracteres sean reemplazados por un numeral (#) o 🐱. Esta función deberá siempre mantener los últimos cuatro caracteres intactos, aún cuando el string sea de menor longitud.*/ 

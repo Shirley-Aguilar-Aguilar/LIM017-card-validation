@@ -17,13 +17,14 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento oncli
     var creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
     console.log( creditCardNumber);
     validator.isValid(creditCardNumber);
+    validator.maskify(creditCardNumber);
  }
 
  var buttonNumber= document.getElementById("buttonNumber");
  buttonNumber.addEventListener("click",inputNumber) ;
 
 
-//ocultar 5 primeros digitos de la tarjeta
+//mostrar solo los ultimos 4 digitos
 
 
 
