@@ -6,7 +6,7 @@ function eventSecondPage(){
     document.getElementById("firstPage").style.display= "none"; //ocultar página
     document.getElementById("secondPage").style.display= "block";//mostrar página
     
-};
+}
 var buttonInput= document.getElementById("buttonInput");
 buttonInput.addEventListener("click", eventSecondPage); //registrar evento onclick
 
@@ -20,11 +20,9 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento oncli
     validator.maskify(creditCardNumber);
     // dato que retorna con digitos ocultos
     let resultFinalOfMaskify = validator.maskify(creditCardNumber);
-    creditCardNumber = resultFinalOfMaskify ;
-    alert(resultFinalOfMaskify);
+    document.getElementById("creditCardNumber").value= resultFinalOfMaskify ;
 
-
- };
+ }
 
  var buttonNumber= document.getElementById("buttonNumber");
  buttonNumber.addEventListener("click",inputNumber) ;
