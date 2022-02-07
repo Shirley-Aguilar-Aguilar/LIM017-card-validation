@@ -1,11 +1,5 @@
 import validator from './validator.js';
 
-console.log(validator);
-
-
-
- 
-
 //cambio de página 1 a 2
 function eventSecondPage(){
    
@@ -13,7 +7,26 @@ function eventSecondPage(){
     document.getElementById("secondPage").style.display= "block";//mostrar página
     
 }
-document.addEventListener("click", eventSecondPage); //registrar evento onclick
+var buttonInput= document.getElementById("buttonInput");
+buttonInput.addEventListener("click", eventSecondPage); //registrar evento onclick
+
+//datos  obstenidos del usuario
+
+ function inputNumber(){   
+
+    var creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
+    console.log( creditCardNumber);
+    validator.isValid(creditCardNumber);
+ }
+
+ var buttonNumber= document.getElementById("buttonNumber");
+ buttonNumber.addEventListener("click",inputNumber) ;
+
+
+//ocultar 5 primeros digitos de la tarjeta
+
+
+
 
 
 
