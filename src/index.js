@@ -14,13 +14,26 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento oncli
 
  function inputNumber(){   
 
-    var creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
+    let creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
     console.log( creditCardNumber);
     validator.isValid(creditCardNumber);
     validator.maskify(creditCardNumber);
     // dato que retorna con digitos ocultos
     let resultFinalOfMaskify = validator.maskify(creditCardNumber);
     document.getElementById("creditCardNumber").value= resultFinalOfMaskify ;
+
+    //dato que retorna si la tarjeta es valida o no
+    let resultFinalOfIsValid = validator.isValid(creditCardNumber);
+    let nameUsuario= document.getElementById("nameUsuario").value ;
+
+     if(resultFinalOfIsValid==true){
+        alert(nameUsuario + " , el número de tu tarjeta es válido");
+     }
+     else{
+        alert(nameUsuario + ", el número de tu tarjeta no es válido");
+
+     }
+
 
  }
 

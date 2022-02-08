@@ -68,6 +68,7 @@ const validator = {
     console.log(finalResult);
 
     return finalResult;
+    
   },
 
 
