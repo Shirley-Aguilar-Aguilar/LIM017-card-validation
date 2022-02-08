@@ -7,7 +7,7 @@ function eventSecondPage(){
     document.getElementById("secondPage").style.display= "block";//mostrar página
     
 }
-var buttonInput= document.getElementById("buttonInput");
+let buttonInput= document.getElementById("buttonInput");
 buttonInput.addEventListener("click", eventSecondPage); //registrar evento onclick
 
 //datos  obstenidos del usuario
@@ -18,6 +18,8 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento oncli
     console.log( creditCardNumber);
     validator.isValid(creditCardNumber);
     validator.maskify(creditCardNumber);
+
+
     // dato que retorna con digitos ocultos
     let resultFinalOfMaskify = validator.maskify(creditCardNumber);
     document.getElementById("creditCardNumber").value= resultFinalOfMaskify ;
@@ -37,7 +39,7 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento oncli
 
  }
 
- var buttonNumber= document.getElementById("buttonNumber");
+ let buttonNumber= document.getElementById("buttonNumber");
  buttonNumber.addEventListener("click",inputNumber) ;
 
 
