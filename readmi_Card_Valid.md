@@ -30,7 +30,9 @@
  ## Imagen del proyecto final 🔧
  
  
- ![imagen del proyecto final](image.jpg)
+ ![imagen del proyecto final](https://user-images.githubusercontent.com/97176343/153120089-3cea1919-1b66-41b3-88dc-aee66761ac8e.jpeg)
+ ![imagen del proyecto final](https://user-images.githubusercontent.com/97176343/153120091-bf5dadc6-5920-4b5a-bd64-c3e5c8fb5e22.jpeg)
+ 
  
  
  
@@ -48,7 +50,7 @@
  ## Imágenes del prototipo a lapiz y papel 🔧
  
  
- ![imagen del prototipo en papel](image.jpg)
+ ![imagen del prototipo en papel](https://user-images.githubusercontent.com/97176343/153119818-64ab7762-b7c8-4d72-81ec-240849592145.jpeg)
  
  
  
@@ -62,7 +64,7 @@
 ## Imágenes del prototipo en Figma 🔧
  
  
- ![imagen del prototipo en figma final](image.jpg)
+ ![imagen del prototipo en figma final](https://user-images.githubusercontent.com/97176343/153120102-72ce1b5a-7562-4bac-b7fb-dfa2d93870de.jpeg)
  
  
  
