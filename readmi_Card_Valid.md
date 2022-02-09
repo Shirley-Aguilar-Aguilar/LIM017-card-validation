@@ -37,9 +37,12 @@
 
 ## Investigación UX
   ### Quiénes son los usuarios y los objetivos en relación con el producto.
+      -Los usuarios son todas aquellas personas interesadas en escuchar la música de la banda Coldplay en un concierto en Perú y que desean comprar sus entradas via online.
   
   
   ### Cómo el producto soluciona los problemas/necesidades de dichos usuarios.
+      -Los usuarios podran validar su número de tarjeta para poder acceder a la compra de sus entradas.
+      -Ahorro de tiempo
   
   
  ## Imágenes del prototipo a lapiz y papel 🔧
@@ -51,6 +54,9 @@
  
  
   ### Resumen del feedback recibido indicando las mejoras a realizar.
+       -Agregarle fondo de pantalla
+       -Usar colores oscuros y relacionadas a la banda coldplay
+  
   
   
 ## Imágenes del prototipo en Figma 🔧
