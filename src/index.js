@@ -8,19 +8,18 @@ function eventSecondPage(){
     
 }
 let buttonInput= document.getElementById("buttonInput");
-buttonInput.addEventListener("click", eventSecondPage); //registrar evento onclick
+buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
 
 
 //validar que número de tarjeta sea solo número
 
+función onlyNumbers(){
 
 
+}
 
-
-
-
-
-
+let creditCard= document.getElementById("creditCardNumber").value;
+buttonInput.addEventListener("keypress", onlyNumbers);
 
 
 
