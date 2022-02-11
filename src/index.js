@@ -39,15 +39,12 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
 
     //dato que retorna si la tarjeta es valida o no
     let resultFinalOfIsValid = validator.isValid(creditCardNumber);
-    let nameUsuario= document.getElementById("nameUsuario").value ;
 
      if(resultFinalOfIsValid==true){
         document.getElementById("cardValid").style.display= "block";
      }
      else{
-        
-        document.getElementById("cardNotValid").style.display= "block";
-
+        document.getElementById("cardNotValid").style.display= "block"; 
      }
 
   }
@@ -57,3 +54,16 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
 
 
 
+function clearDates(){
+   document.getElementById("nameUSuario").value == "" ;
+   document.getElementById("creditCardNumber").value== "";
+   document.getElementsByClassName("input")[2].value == "";
+   document.getElementsByClassName("input")[3].value == "";
+   
+
+}
+
+let buttonClear= document.getElementById("buttonClear");
+buttonClear.addEventListener("click",clearDates) ;
+
+        

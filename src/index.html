@@ -10,14 +10,13 @@
     
     <header >
       <h1> COLDPLAY </h1>
-      <h3> en Perú</h3>
+      <h3>en Perú</h3>
 
     </header>
     
 
     <section id="firstPage" >
-       <main> 
-           
+       <main id="contentFirstPage"> 
            <h3>14 de Febrero 2022</h3>
            <h3>8:00pm</h3>
            <h3>Estadio Nacional</h3>
@@ -25,45 +24,50 @@
            <button  id="buttonInput" >Comprar entrada </button>
        </main>
 
-       <footer></footer>
+       <footer>Project made by Shirley.B Aguilar</footer>
     </section>
 
   
 
     <section id="secondPage" style="display: none;">
-      
-      <h1 class="bankName">MusicBank</h1>
-      <br>
-      <main> 
+    
+      <main id="contentSecondPage" > 
         <div>
           <p class="nameInput">NOMBRES Y APELLIDOS</p>
           <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
         </div>
 
         <div id="cardValid"  style="display: none;">
-          <p>El número de tarjeta es válida.<br> Puede proceder con su compra.</p>
+          <p>El número de tarjeta es válido.<br> Puede proceder con su compra.</p>
         </div>
 
         <div id="cardNotValid" style="display: none;">
-          <p>El número de tarjeta no es válida<br>Ingrese número válido.</p>
+          <p>El número de tarjeta no es válido<br>Ingrese número válido.</p>
         </div>
 
         <div>
         <p class="nameInput">NÚMERO DE TARJETA</p>
         <input id="creditCardNumber" class="inputs" placeholder="Ingresa tu número de tarjeta">
         </div>
+     
 
-        <div >
+        <div class="boxTogether">
           <p class="nameInput">Expiración</p>
           <input id="endNumber" class="inputs" placeholder="DD/MM/AA">
+        </div>
+
+        <div > 
+          
+          <p class="nameInput">CVV</p>
           <input id="endNumber" class="inputs" placeholder="CVV">
 
-          </div>
-  
-
-        <button id="buttonNumber" >Ingresar</button>
-
-      </main>
+        </div>
+        
+        <button id="buttonNumber" class="botonSmall">Ingresar</button>
+        
+        <button id="buttonClear" class="botonSmall" >Limpiar</button>
+        
+     </main>
 
    </section>
 
