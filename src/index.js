@@ -13,13 +13,11 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
 
 //validar que número de tarjeta sea solo número
 
-función onlyNumbers(){
+//función onlyNumbers(){
+//}
 
-
-}
-
-let creditCard= document.getElementById("creditCardNumber").value;
-buttonInput.addEventListener("keypress", onlyNumbers);
+//let creditCard= document.getElementById("creditCardNumber").value;
+//buttonInput.addEventListener("keypress", onlyNumbers);
 
 
 
