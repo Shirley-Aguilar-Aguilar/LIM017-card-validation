@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js" type="module"></script>
+    
   </head>
   <body>
     
@@ -31,19 +31,28 @@
   
 
     <section id="secondPage" style="display: none;">
-      <br>
-      <br>
+      
       <h1 class="bankName">MusicBank</h1>
       <br>
-      <br>
       <main> 
-        <input id="nameUsuario" class="box" placeholder="Ingresa tu nombre , por favor">
-        <br>
-        <br>
-        <input id="creditCardNumber" class="box" placeholder="Ingresa tu número de tarjeta">
-        <br>
-        <br>
-        <br>
+        <div>
+          <p class="nameInput">NOMBRES Y APELLIDOS</p>
+          <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
+        </div>
+
+        <div id="cardValid"  style="display: none;">
+          <p>El número de tarjeta es válida.<br> Puede proceder con su compra.</p>
+        </div>
+
+        <div id="cardNotValid" style="display: none;">
+          <p>El número de tarjeta no es válida<br>Ingrese número válido.</p>
+        </div>
+
+        <div>
+        <p class="nameInput">NÚMERO DE TARJETA</p>
+        <input id="creditCardNumber" class="inputs" placeholder="Ingresa tu número de tarjeta">
+        </div>
+
         <button id="buttonNumber" >Ingresar</button>
 
       </main>
@@ -53,7 +62,7 @@
 
 
 
-
+  <script src="index.js" type="module"></script>
     
   </body>
 </html>

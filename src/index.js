@@ -10,7 +10,23 @@ function eventSecondPage(){
 let buttonInput= document.getElementById("buttonInput");
 buttonInput.addEventListener("click", eventSecondPage); //registrar evento onclick
 
-//datos  obstenidos del usuario
+
+//validar que número de tarjeta sea solo número
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //datos  obstenidos del usuario
 
  function inputNumber(){   
 
@@ -29,15 +45,15 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento oncli
     let nameUsuario= document.getElementById("nameUsuario").value ;
 
      if(resultFinalOfIsValid==true){
-        alert(nameUsuario + " , el número de tu tarjeta es válido");
+        document.getElementById("cardValid").style.display= "block";
      }
      else{
-        alert(nameUsuario + ", el número de tu tarjeta no es válido");
+        
+        document.getElementById("cardNotValid").style.display= "block";
 
      }
 
-
- }
+  }
 
  let buttonNumber= document.getElementById("buttonNumber");
  buttonNumber.addEventListener("click",inputNumber) ;
