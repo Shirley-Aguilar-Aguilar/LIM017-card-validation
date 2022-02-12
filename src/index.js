@@ -16,8 +16,9 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
 //función onlyNumbers(){
 //}
 
-//let creditCard= document.getElementById("creditCardNumber").value;
-//buttonInput.addEventListener("keypress", onlyNumbers);
+let creditCard= document.getElementById("creditCardNumber").value;
+buttonInput.addEventListener("keypress", onlyNumbers);
+
 
 
 
@@ -53,14 +54,12 @@ buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
  buttonNumber.addEventListener("click",inputNumber) ;
 
 
-
+//limpiar datos
 function clearDates(){
-   document.getElementById("nameUSuario").value == "" ;
-   document.getElementById("creditCardNumber").value== "";
-   document.getElementsByClassName("input")[2].value == "";
-   document.getElementsByClassName("input")[3].value == "";
+document.getElementById("formu").reset();
+document.getElementById("cardValid").style.display= "none";
+document.getElementById("cardNotValid").style.display= "none";
    
-
 }
 
 let buttonClear= document.getElementById("buttonClear");
