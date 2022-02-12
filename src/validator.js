@@ -109,3 +109,7 @@ const validator = {
 };
 
 export default validator;
+
+
+//Implementa validator.getIssuer.
+// Interfaz muestra la franquicia de la tarjeta

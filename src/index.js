@@ -2,64 +2,67 @@ import validator from './validator.js';
 
 //cambio de página 1 a 2
 function eventSecondPage(){
-   
     document.getElementById("firstPage").style.display= "none"; //ocultar página
-    document.getElementById("secondPage").style.display= "block";//mostrar página
-    
+    document.getElementById("secondPage").style.display= "block";//mostrar página  
 }
+
 let buttonInput= document.getElementById("buttonInput");
 buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
 
-
 //validar que número de tarjeta sea solo número
+function onlyNumbers(input){
+   //este regex valida que solo existan numeros
+   var regexOnlyNumbers =  new RegExp('^[0-9]+$');
+    
+   return regexOnlyNumbers.test(input);
+}
 
-//función onlyNumbers(){
-//}
+function manageOnlyNumbersValidation() {  
+   let creditCardNumberValue= document.getElementById("creditCardNumber").value; 
+   console.log("que cosa capturamos: " + creditCardNumberValue);
+   //si el numero de tarjeta no hace match con el regex de solo numeros
+   if (creditCardNumberValue !== '') {
+      if(!onlyNumbers(creditCardNumberValue)) {
+         document.getElementById("dateNoValid").style.display= "block";
+      }
+   }
+}
 
-let creditCard= document.getElementById("creditCardNumber").value;
-buttonInput.addEventListener("keypress", onlyNumbers);
+let creditCardNumber= document.getElementById("creditCardNumber");
+creditCardNumber.addEventListener("input", manageOnlyNumbersValidation);
 
+      
+ //datos  obstenidos del usuario
+function inputNumber(){   
+   document.getElementById("dateNoValid").style.display= "none";
+   let creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
+   console.log( creditCardNumber);
+   
+   validator.isValid(creditCardNumber);
+   validator.maskify(creditCardNumber);
 
+   // dato que retorna con digitos ocultos
+   let resultFinalOfMaskify = validator.maskify(creditCardNumber);
+   document.getElementById("creditCardNumber").value= resultFinalOfMaskify ;
 
-
-
-
-  //datos  obstenidos del usuario
-
- function inputNumber(){   
-
-    let creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
-    console.log( creditCardNumber);
-    validator.isValid(creditCardNumber);
-    validator.maskify(creditCardNumber);
-
-
-    // dato que retorna con digitos ocultos
-    let resultFinalOfMaskify = validator.maskify(creditCardNumber);
-    document.getElementById("creditCardNumber").value= resultFinalOfMaskify ;
-
-    //dato que retorna si la tarjeta es valida o no
-    let resultFinalOfIsValid = validator.isValid(creditCardNumber);
-
-     if(resultFinalOfIsValid==true){
+   //dato que retorna si la tarjeta es valida o no
+   let resultFinalOfIsValid = validator.isValid(creditCardNumber);
+   if (resultFinalOfIsValid==true) {
         document.getElementById("cardValid").style.display= "block";
-     }
-     else{
+   } else {
         document.getElementById("cardNotValid").style.display= "block"; 
-     }
+   }
+}
 
-  }
-
- let buttonNumber= document.getElementById("buttonNumber");
- buttonNumber.addEventListener("click",inputNumber) ;
-
+let buttonNumber= document.getElementById("buttonNumber");
+buttonNumber.addEventListener("click",inputNumber) ;
 
 //limpiar datos
 function clearDates(){
-document.getElementById("formu").reset();
-document.getElementById("cardValid").style.display= "none";
-document.getElementById("cardNotValid").style.display= "none";
-   
+   document.getElementById("formu").reset();
+   document.getElementById("cardValid").style.display= "none";
+   document.getElementById("cardNotValid").style.display= "none";
+   document.getElementById("dateNoValid").style.display= "none";  
 }
 
 let buttonClear= document.getElementById("buttonClear");

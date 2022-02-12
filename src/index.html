@@ -24,51 +24,72 @@
            <button  id="buttonInput" >Comprar entrada </button>
        </main>
 
-       <footer>Project made by Shirley.B Aguilar</footer>
+       <footer id="nameAutor">Project made by Shirley.B Aguilar</footer>
+       <figure>
+       <img id = "logoVisaMaster" src="logo-visa-mastercard.jpg" alt="">
+      </figure>
     </section>
 
   
 
     <section id="secondPage" style="display: none;">
     
-      <main id="contentSecondPage" > 
-        <div>
-          <form  id="formu">
-          <p class="nameInput">NOMBRES Y APELLIDOS</p>
-          <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
-        </div>
+      
+        <main id="contentSecondPage" > 
+          <form id="formu"> 
+            
+            <p class="nameInput">NOMBRES Y APELLIDOS</p>
+            <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
+          
 
-        <div id="cardValid"  style="display: none;">
-          <p>El número de tarjeta es válido.<br> Puede proceder con su compra.</p>
-        </div>
+           <div id="cardValid"  style="display: none;">
+            <p>El número de tarjeta es válido.<br> Puede proceder con su compra.</p>
+           </div>
 
-        <div id="cardNotValid" style="display: none;">
-          <p>El número de tarjeta no es válido<br>Ingrese número válido.</p>
-        </div>
+           <div id="cardNotValid" style="display: none;">
+            <p>El número de tarjeta no es válido<br>Ingrese número válido.</p>
+           </div>
 
-        <div>
-        <p class="nameInput">NÚMERO DE TARJETA</p>
-        <input id="creditCardNumber" class="inputs" placeholder="Ingresa tu número de tarjeta">
-        </div>
+           <div id="dateNoValid"  style="display: none;">
+            <p>Escribir solo números</p>
+           </div>
+
+           <div>
+            <p class="nameInput">NÚMERO DE TARJETA</p>
+            <input id="creditCardNumber" class="inputs" placeholder="Ingresa tu número de tarjeta">
+           </div>
      
 
-        <div class="boxTogether">
-          <p class="nameInput">Expiración</p>
-          <input id="endNumber" class="inputs" placeholder="DD/MM/AA">
-        </div>
+           <div class="boxTogether">
+            <p class="nameInput">Expiración</p>
+            <input id="endNumber" class="inputs" placeholder="DD/MM/AA">
+           </div>
 
-        <div > 
-          
-          <p class="nameInput">CVV</p>
-          <input id="endNumber" class="inputs" placeholder="CVV">
+           <div > 
+            <p class="nameInput">CVV</p>
+            <input id="cvvNumber" class="inputs" placeholder="CVV">
 
-        </div>
-        </form>
+          </div>
+          </form>
+        
         <button id="buttonNumber" class="botonSmall">Ingresar</button>
         
         <button id="buttonClear" class="botonSmall" >Limpiar</button>
         
-     </main>
+      </main>
+      <footer id="">
+         <figure id="logosCard">
+            <img id = "logoPci" class="logo" src="logo-pci.jpg" alt="">
+            <img id = "logoVisa" class="logo" src="logo-visa.png" alt="">
+            <img id = "logoMaster" class="logo" src="master-card.jpg" alt="">
+            
+         </figure>
+         <figure id="logosBank">
+          <img id = "logoBva" class="logo" src="logo-bbva.jpg" alt="">
+          <img id = "logoInterbank" class="logo" src="logo-interbank.png" alt="">
+          <img id = "logoBcp" class="logo" src="logo-bcp.png" alt="">
+       </figure>
+       </footer>
 
    </section>
 
