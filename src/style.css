@@ -5,7 +5,7 @@
 
 header{
     background-image: url('../header.webp');
-    height: auto;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -127,7 +127,7 @@ button{
 
 
 
-#cardValid{
+.hiddenMessage{
   text-align: center;
   font-size:large ;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -135,21 +135,12 @@ button{
   width: 400px;
   height: 60px;
   margin-top: 10px;
-  
-  
-
 }
-#cardNotValid{
+.hiddenMessageSmall{
   text-align: center;
   font-size:large ;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: goldenrod;
-  width: 400px;
-  height: 60px;
-  margin-top: 10px;
-  
-  
-
+  color:white;
 }
 
 #buttonNumber{
@@ -163,23 +154,13 @@ button{
   border-radius: 10px;
 }
 
-#dateNoValid{
-  text-align: center;
-  font-size:large ;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color:goldenrod;
-  width: 400px;
-  height: 50px;
-  margin-top: 10px;
-}
-
 #logoVisaMaster{
   height: 100px;
   width: 300px;
   margin-left: 80px;
 }
 .logo{
-
+  margin-top: 45px;
   width: 100px;
   height: 50px;
 }
@@ -188,16 +169,32 @@ button{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 700px;
-  margin-top: 60px;
+  margin-left: 550px;
   float: left;
 }
 #logosBank{
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 700px;
-  margin-top: 60px;
-  
+  margin-left: 50px;
+  float: left;
+}
+#logoPci{
+  float: left;
+  margin-left: 50px;
+}
 
+.marcaTarjeta{
+  height: 100px;
+  width: 200px;
+  
+  
+}
+.marcas{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+ 
 }

@@ -37,28 +37,26 @@
       
         <main id="contentSecondPage" > 
           <form id="formu"> 
-            
+  
             <p class="nameInput">NOMBRES Y APELLIDOS</p>
             <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
-          
-
-           <div id="cardValid"  style="display: none;">
-            <p>El número de tarjeta es válido.<br> Puede proceder con su compra.</p>
-           </div>
-
-           <div id="cardNotValid" style="display: none;">
-            <p>El número de tarjeta no es válido<br>Ingrese número válido.</p>
-           </div>
-
-           <div id="dateNoValid"  style="display: none;">
-            <p>Escribir solo números</p>
-           </div>
 
            <div>
             <p class="nameInput">NÚMERO DE TARJETA</p>
             <input id="creditCardNumber" class="inputs" placeholder="Ingresa tu número de tarjeta">
            </div>
-     
+
+           <div id="cardValid" class="hiddenMessage" style="display: none;">
+            <p>El número de tarjeta es válido.<br> Puede proceder con su compra.</p>
+           </div>
+
+           <div id="cardNotValid" class="hiddenMessage" style="display: none;">
+            <p>El número de tarjeta no es válido<br>Ingrese número válido.</p>
+           </div>
+
+           <div id="dataNoValid" class="hiddenMessage"  style="display: none;">
+            <p>Ingresar solo números</p>
+           </div>
 
            <div class="boxTogether">
             <p class="nameInput">Expiración</p>
@@ -68,28 +66,59 @@
            <div > 
             <p class="nameInput">CVV</p>
             <input id="cvvNumber" class="inputs" placeholder="CVV">
-
           </div>
+
           </form>
         
         <button id="buttonNumber" class="botonSmall">Ingresar</button>
-        
         <button id="buttonClear" class="botonSmall" >Limpiar</button>
         
       </main>
-      <footer id="">
+
+      <div class="marcas">
+        <figure id="visa"  style="display: none;">
+          <figcaption>
+            <p class="hiddenMessageSmall" >TARJETA VISA</p>
+          </figcaption>
+          <img class="marcaTarjeta" src="logo-visa.png" alt="">
+          
+        </figure>
+
+        <figure id="masterCard" style="display: none;" >
+          <figcaption>
+            <p class="hiddenMessageSmall" >TARJETA MASTERCARD</p>
+          </figcaption> 
+          <img class="marcaTarjeta" src="master-card.jpg" alt="">
+         
+        </figure>
+
+        <figure id="americanExpress"  style="display: none;">
+          <figcaption>
+            <p class="hiddenMessageSmall">TARJETA AMERICAN EXPRESS</p>
+          </figcaption>
+          <img class="marcaTarjeta" src="logo-American-Express.jpg" alt="">
+          
+        </figure>
+
+      </div>
+      
+      <footer >
          <figure id="logosCard">
-            <img id = "logoPci" class="logo" src="logo-pci.jpg" alt="">
+            <img id = "logoAmericanExpress" class="logo" src="logo-American-Express.jpg" alt="">
             <img id = "logoVisa" class="logo" src="logo-visa.png" alt="">
             <img id = "logoMaster" class="logo" src="master-card.jpg" alt="">
             
          </figure>
-         <figure id="logosBank">
+          <img id = "logoPci" class="logo" src="logo-pci.jpg" alt="">
+          
+        <figure id="logosBank">
           <img id = "logoBva" class="logo" src="logo-bbva.jpg" alt="">
           <img id = "logoInterbank" class="logo" src="logo-interbank.png" alt="">
           <img id = "logoBcp" class="logo" src="logo-bcp.png" alt="">
-       </figure>
+        </figure>
        </footer>
+
+      
 
    </section>
 

@@ -23,7 +23,7 @@ function manageOnlyNumbersValidation() {
    //si el numero de tarjeta no hace match con el regex de solo numeros
    if (creditCardNumberValue !== '') {
       if(!onlyNumbers(creditCardNumberValue)) {
-         document.getElementById("dateNoValid").style.display= "block";
+         document.getElementById("dataNoValid").style.display= "block";
       }
    }
 }
@@ -34,7 +34,7 @@ creditCardNumber.addEventListener("input", manageOnlyNumbersValidation);
       
  //datos  obstenidos del usuario
 function inputNumber(){   
-   document.getElementById("dateNoValid").style.display= "none";
+   document.getElementById("dataNoValid").style.display= "none";
    let creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
    console.log( creditCardNumber);
    
@@ -62,10 +62,9 @@ function clearDates(){
    document.getElementById("formu").reset();
    document.getElementById("cardValid").style.display= "none";
    document.getElementById("cardNotValid").style.display= "none";
-   document.getElementById("dateNoValid").style.display= "none";  
+   document.getElementById("dataNoValid").style.display= "none";  
 }
 
 let buttonClear= document.getElementById("buttonClear");
 buttonClear.addEventListener("click",clearDates) ;
 
-        
