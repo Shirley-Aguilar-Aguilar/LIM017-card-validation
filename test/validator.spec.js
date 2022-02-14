@@ -40,5 +40,35 @@ describe('validator', () => {
     it('Debería retornar "######orld" para "helloworld"', () => {
       expect(validator.maskify('helloworld')).toBe('######orld');
     });
+
+  
   });
+
+  describe('validator.getIssuer', () => {
+    it('debería ser una función', () => {
+      expect(typeof validator.getIssuer).toBe('function');
+    });
+
+    it('debería retornar american express para "371180303257522"', () => {
+      expect(validator.getIssuer('371180303257522')).toBe("american express");
+    });
+
+    it('debería retornar visa para "4009175332806176"', () => {
+      expect(validator.getIssuer('4009175332806176')).toBe("visa");
+    });
+
+    it('debería retornar mastercard para "5031755734530604"', () => {
+      expect(validator.getIssuer('5031755734530604')).toBe("mastercard");
+    });
+    it('debería retornar invalid para "123456789"', () => {
+      expect(validator.getIssuer('123456789')).toBe("invalid");
+    });
+  });
+
+
+
+
+
+
+
 });

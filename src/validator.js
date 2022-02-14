@@ -105,11 +105,38 @@ const validator = {
 
   },
 
+  getIssuer: function(creditCardNumber){
+    const VALID_NUMBER_AMERICAN_EXPRESS = 3 ;
+    const VALID_NUMBER_VISA = 4 ;
+    const VALID_NUMBER_MASTERCARD = 5 ;
+
+    let result= "invalid";
+    // obtener el 1 numero de la tarjeta y la cantidad de numeros
+    let firstNumberFromCard = creditCardNumber.toString()[0];
+    console.log("El primer digito es : " + firstNumberFromCard);
+    let digitQuantity = creditCardNumber.toString().length;
+    console.log("La cantidad de digitos totales es : "+  digitQuantity);
+
+   if ((digitQuantity === 15) && (firstNumberFromCard === VALID_NUMBER_AMERICAN_EXPRESS)) {
+       result= "american express";
+     
+   } else if ((digitQuantity === 16)) {
+      if (firstNumberFromCard === VALID_NUMBER_VISA){
+        result = "visa";
+      }
+      else if(firstNumberFromCard === VALID_NUMBER_MASTERCARD) {
+        result = "mastercard";
+      }
+
+   }
+    
+    return result ;
+
+},
 
 };
 
 export default validator;
 
 
-//Implementa validator.getIssuer.
-// Interfaz muestra la franquicia de la tarjeta
+ 
