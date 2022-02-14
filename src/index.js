@@ -49,18 +49,39 @@ function inputNumber(){
 
    //dato que retorna si la tarjeta es valida o no
    let resultFinalOfIsValid = validator.isValid(creditCardNumber);
-   if (resultFinalOfIsValid==true) {
+   if (resultFinalOfIsValid) {
         document.getElementById("cardValid").style.display= "block";
    } else {
         document.getElementById("cardNotValid").style.display= "block"; 
    }
+
+    //resultado de get issuer
+   let resultFinalOfIssuer = validator.getIssuer(creditCardNumber);
+   if(resultFinalOfIsValid){
+      if (resultFinalOfIssuer == "americanExpress"){
+         document.getElementById("americanExpress").style.display= "block";
+         document.getElementById("visa").style.display= "none";
+         document.getElementById("masterCard").style.display= "none";
+      }
+      else if (resultFinalOfIssuer == "visa"){
+         document.getElementById("visa").style.display= "block";
+         document.getElementById("americanExpress").style.display= "none";
+         document.getElementById("masterCard").style.display= "none";
+      }
+      else if (resultFinalOfIssuer == "mastercard"){
+         document.getElementById("masterCard").style.display= "block";
+         document.getElementById("visa").style.display= "none";
+         document.getElementById("americanExpress").style.display= "none";
+      }
+
+   } 
 }
 
 let buttonNumber= document.getElementById("buttonNumber");
 buttonNumber.addEventListener("click",inputNumber) ;
 
 //limpiar datos
-function clearDates(){
+function clearData(){
    document.getElementById("formu").reset();
    document.getElementById("cardValid").style.display= "none";
    document.getElementById("cardNotValid").style.display= "none";
@@ -68,5 +89,5 @@ function clearDates(){
 }
 
 let buttonClear= document.getElementById("buttonClear");
-buttonClear.addEventListener("click",clearDates) ;
+buttonClear.addEventListener("click",clearData) ;
 

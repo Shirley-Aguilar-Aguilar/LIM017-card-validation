@@ -50,7 +50,7 @@ describe('validator', () => {
     });
 
     it('debería retornar american express para "371180303257522"', () => {
-      expect(validator.getIssuer('371180303257522')).toBe("american express");
+      expect(validator.getIssuer('371180303257522')).toBe("americanExpress");
     });
 
     it('debería retornar visa para "4009175332806176"', () => {

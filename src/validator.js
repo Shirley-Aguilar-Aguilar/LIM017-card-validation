@@ -106,33 +106,36 @@ const validator = {
   },
 
   getIssuer: function(creditCardNumber){
-    const VALID_NUMBER_AMERICAN_EXPRESS = 3 ;
-    const VALID_NUMBER_VISA = 4 ;
-    const VALID_NUMBER_MASTERCARD = 5 ;
+    function cardType(){  
+      const VALID_NUMBER_AMERICAN_EXPRESS = 3 ;
+      const VALID_NUMBER_VISA = 4 ;
+      const VALID_NUMBER_MASTERCARD = 5 ;
 
-    let result= "invalid";
-    // obtener el 1 numero de la tarjeta y la cantidad de numeros
-    let firstNumberFromCard = creditCardNumber.toString()[0];
-    console.log("El primer digito es : " + firstNumberFromCard);
-    let digitQuantity = creditCardNumber.toString().length;
-    console.log("La cantidad de digitos totales es : "+  digitQuantity);
-
-   if ((digitQuantity === 15) && (firstNumberFromCard === VALID_NUMBER_AMERICAN_EXPRESS)) {
-       result= "american express";
+      
+      // obtener el 1 numero de la tarjeta y la cantidad de numeros
+      let firstNumberFromCard = parseInt(creditCardNumber.toString()[0]);
+      console.log("El primer digito es : " + firstNumberFromCard);
+      let digitQuantity = parseInt(creditCardNumber.toString().length);
+      console.log("La cantidad de digitos totales es : "+  digitQuantity);
+      let result= "invalid";
+      if ((digitQuantity === 15) && (firstNumberFromCard === VALID_NUMBER_AMERICAN_EXPRESS)) {
+       result= "americanExpress";
      
-   } else if ((digitQuantity === 16)) {
-      if (firstNumberFromCard === VALID_NUMBER_VISA){
-        result = "visa";
-      }
-      else if(firstNumberFromCard === VALID_NUMBER_MASTERCARD) {
-        result = "mastercard";
-      }
-
-   }
-    
-    return result ;
-
-},
+      } else if ((digitQuantity === 16)) {
+          if (firstNumberFromCard === VALID_NUMBER_VISA){
+             result = "visa";
+          }
+           else if(firstNumberFromCard === VALID_NUMBER_MASTERCARD) {
+              result = "mastercard";
+            }
+           
+        }
+        console.log(result);
+        return result ;
+    }
+     return cardType(creditCardNumber);
+   
+  },
 
 };
 
