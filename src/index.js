@@ -86,6 +86,9 @@ function clearData(){
    document.getElementById("cardValid").style.display= "none";
    document.getElementById("cardNotValid").style.display= "none";
    document.getElementById("dataNoValid").style.display= "none";  
+   document.getElementById("visa").style.display= "none";
+   document.getElementById("americanExpress").style.display= "none";
+   document.getElementById("masterCard").style.display= "none";
 }
 
 let buttonClear= document.getElementById("buttonClear");
