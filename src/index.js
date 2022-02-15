@@ -62,16 +62,25 @@ function inputNumber(){
          document.getElementById("americanExpress").style.display= "block";
          document.getElementById("visa").style.display= "none";
          document.getElementById("masterCard").style.display= "none";
+         document.getElementById("invalid").style.display= "none";
       }
       else if (resultFinalOfIssuer == "visa"){
          document.getElementById("visa").style.display= "block";
          document.getElementById("americanExpress").style.display= "none";
          document.getElementById("masterCard").style.display= "none";
+         document.getElementById("invalid").style.display= "none";
       }
       else if (resultFinalOfIssuer == "mastercard"){
          document.getElementById("masterCard").style.display= "block";
          document.getElementById("visa").style.display= "none";
          document.getElementById("americanExpress").style.display= "none";
+         document.getElementById("invalid").style.display= "none";
+      }
+      else  if (resultFinalOfIssuer == "invalid") { 
+         document.getElementById("masterCard").style.display= "none";
+         document.getElementById("visa").style.display= "none";
+         document.getElementById("americanExpress").style.display= "none";
+         document.getElementById("invalid").style.display= "block";
       }
 
    } 
