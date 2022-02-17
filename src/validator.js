@@ -14,9 +14,7 @@ const validator = {
         console.log(result);
       }
       return parseInt(result);
-
     }
-
     // multiplicar x2 los numeros en posiciones pares  y se sumen los digitos de los números mayores a 10 
     function applyLogicForEvenNumbers(input) {
       let inputAsString = input.toString();
@@ -53,7 +51,6 @@ const validator = {
       for (var i = 0; i <= inputAsString.length - 1; i++) {
         sumatoria = sumatoria + parseInt(inputAsString[i]);
       }
-    
       return sumatoria;
     }
 
@@ -70,8 +67,6 @@ const validator = {
     return finalResult;
     
   },
-
-
   // OCULTAR TODOS LOS INDICES MENOS LOS 4 ÚTIMOS .
 
   maskify: function (creditCardNumber) {
@@ -81,7 +76,6 @@ const validator = {
 
       if (inputAsString.length <= SIZE_OF_VISIBLE_NUMBERS) {
         //retorna el valor sin ningun cambio
-      
         return inputAsString;
       } else {
         let maskifyInput = "";
@@ -93,16 +87,10 @@ const validator = {
             maskifyInput = maskifyInput + "#";
           }
         }
-
         return maskifyInput;
       }
-
     }
-    
-
     return maskify(creditCardNumber);
-
-
   },
 
   getIssuer: function(creditCardNumber){

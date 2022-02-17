@@ -1,5 +1,4 @@
 import validator from './validator.js';
-
 //cambio de página 1 a 2
 function eventSecondPage(){
     document.getElementById("firstPage").style.display= "none"; //ocultar página
@@ -98,6 +97,7 @@ function clearData(){
    document.getElementById("visa").style.display= "none";
    document.getElementById("americanExpress").style.display= "none";
    document.getElementById("masterCard").style.display= "none";
+   document.getElementById("invalid").style.display= "none";
 }
 
 let buttonClear= document.getElementById("buttonClear");

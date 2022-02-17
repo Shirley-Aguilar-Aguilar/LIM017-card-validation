@@ -4,40 +4,31 @@
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
-    
   </head>
+
   <body>
-    
     <header >
       <h1> COLDPLAY </h1>
       <h3>en Perú</h3>
-
     </header>
     
-
     <section id="firstPage" >
        <main id="contentFirstPage"> 
-           <h3>14 de Febrero 2022</h3>
+           <h3>18 de Febrero 2022</h3>
            <h3>8:00pm</h3>
            <h3>Estadio Nacional</h3>
            <h3>Concierto exclusivo</h3>
            <button  id="buttonInput" >Comprar entrada </button>
        </main>
-
        <footer id="nameAutor">Project made by Shirley.B Aguilar</footer>
        <figure>
        <img id = "logoVisaMaster" src="logo-visa-mastercard.jpg" alt="">
       </figure>
     </section>
 
-  
-
     <section id="secondPage" style="display: none;">
-    
-      
         <main id="contentSecondPage" > 
           <form id="formu"> 
-  
             <p class="nameInput">NOMBRES Y APELLIDOS</p>
             <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
 
@@ -47,7 +38,7 @@
            </div>
 
            <div id="cardValid" class="hiddenMessage" style="display: none;">
-            <p>El número de tarjeta es válido.<br> Puede proceder con su compra.</p>
+            <p>El número de tarjeta es válido</p>
            </div>
 
            <div id="cardNotValid" class="hiddenMessage" style="display: none;">
@@ -66,14 +57,14 @@
            <div > 
             <p class="nameInput">CVV</p>
             <input id="cvvNumber" class="inputs" placeholder="CVV">
-          </div>
+           </div>
 
           </form>
         
-        <button id="buttonNumber" class="botonSmall">Ingresar</button>
-        <button id="buttonClear" class="botonSmall" >Limpiar</button>
+          <button id="buttonNumber" class="botonSmall">Ingresar</button>
+          <button id="buttonClear" class="botonSmall" >Limpiar</button>
         
-      </main>
+        </main>
 
       <div class="marcas">
         <figure id="visa"  style="display: none;">
@@ -110,25 +101,19 @@
             <img id = "logoAmericanExpress" class="logo" src="logo-American-Express.jpg" alt="">
             <img id = "logoVisa" class="logo" src="logo-visa.png" alt="">
             <img id = "logoMaster" class="logo" src="master-card.jpg" alt="">
-            
          </figure>
+
           <img id = "logoPci" class="logo" src="logo-pci.jpg" alt="">
           
-        <figure id="logosBank">
+         <figure id="logosBank">
           <img id = "logoBva" class="logo" src="logo-bbva.jpg" alt="">
           <img id = "logoInterbank" class="logo" src="logo-interbank.png" alt="">
           <img id = "logoBcp" class="logo" src="logo-bcp.png" alt="">
-        </figure>
+         </figure>
        </footer>
-
-      
 
    </section>
 
-
-
-
   <script src="index.js" type="module"></script>
-    
   </body>
 </html>
