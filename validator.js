@@ -102,9 +102,7 @@ const validator = {
       
       // obtener el 1 numero de la tarjeta y la cantidad de numeros
       let firstNumberFromCard = parseInt(creditCardNumber.toString()[0]);
-      console.log("El primer digito es : " + firstNumberFromCard);
       let digitQuantity = parseInt(creditCardNumber.toString().length);
-      console.log("La cantidad de digitos totales es : "+  digitQuantity);
       let result= "invalid";
       if ((digitQuantity === 15) && (firstNumberFromCard === VALID_NUMBER_AMERICAN_EXPRESS)) {
        result= "americanExpress";
@@ -118,7 +116,6 @@ const validator = {
             }
            
         }
-        console.log(result);
         return result ;
     }
      return cardType(creditCardNumber);

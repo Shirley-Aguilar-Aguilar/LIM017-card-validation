@@ -35,12 +35,10 @@ creditCardNumber.addEventListener("input", manageOnlyNumbersValidation);
 function inputNumber(){   
    document.getElementById("dataNoValid").style.display= "none";
    let creditCardNumber= parseInt(document.getElementById("creditCardNumber").value) ;
-   console.log( creditCardNumber);
    
    validator.isValid(creditCardNumber);
    validator.maskify(creditCardNumber);
    validator.getIssuer(creditCardNumber);
-
 
    // dato que retorna con digitos ocultos
    let resultFinalOfMaskify = validator.maskify(creditCardNumber);
