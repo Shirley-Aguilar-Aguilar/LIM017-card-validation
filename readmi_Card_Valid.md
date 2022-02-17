@@ -3,6 +3,7 @@
 ## Índice
 - Resumen del proyecto
      - Pre-requisitos
+     - Plan de acción
 - Imagen del proyecto final
 - Investigación UX
 - Imágenes del prototipo a lapiz y papel
@@ -24,19 +25,27 @@
  - [x] Descargar e instalar Figma
  - [x] Clonar el repositorio
 
-
+### Plan de acción
+ - [x] Crear prototipos de apariencia
+ - [x] Crear HTML con etiquetas que contengan los datos más importantes.
+ - [x] Transferir valores a archivo index.js.
+ - [x] Transferir valores al validator.js 
+ - [x] Validar número de tarjeta.
+ - [x] Enmascarar digitos de la tarjeta.
+ - [x] Cumplir pruebas unitarias.
+ - [x] Agregarle apariencia.
+ - [x] Realizar parte opcional.
+ - [x] Validar get issuer.
+ - [x] Mostrar resultado de get issuer en la interfaz.
 
 
  ## Imagen del proyecto final 🔧
  
  
- ![imagen del proyecto final](https://user-images.githubusercontent.com/97176343/153120089-3cea1919-1b66-41b3-88dc-aee66761ac8e.jpeg)
- ![imagen del proyecto final](https://user-images.githubusercontent.com/97176343/153120091-bf5dadc6-5920-4b5a-bd64-c3e5c8fb5e22.jpeg)
+ ![imagen del proyecto final](https://user-images.githubusercontent.com/97176343/154544881-9f985837-261e-4a65-985c-0e6068b93681.jpeg)
+ ![imagen del proyecto final](https://user-images.githubusercontent.com/97176343/154544866-b20b5f85-0a4c-4a84-b6f8-92c0a27938c8.jpeg)
  
  
- 
- 
-
 ## Investigación UX
   ### Quiénes son los usuarios y los objetivos en relación con el producto.
       -Los usuarios son todas aquellas personas interesadas en escuchar la música de la banda Coldplay en un concierto en Perú y que desean comprar sus entradas via online.
@@ -58,6 +67,8 @@
   ### Resumen del feedback recibido indicando las mejoras a realizar.
        -Agregarle fondo de pantalla
        -Usar colores oscuros y relacionadas a la banda coldplay
+       -boton para borrar datos.
+       -Mejorar el formato donde ingresan sus valores.
   
   
   
@@ -75,26 +86,26 @@
  - Html
  - [x] Uso de HTML semántico
   CSS
- - [ ] Uso de selectores de CSS
- - [ ] Modelo de caja (box model): borde, margen, padding
+ - [x] Uso de selectores de CSS
+ - [x] Modelo de caja (box model): borde, margen, padding
  - Web APIs
- - [ ] Uso de selectores del DOM
- - [ ] Manejo de eventos del DOM (listeners, propagación, delegación)
- - [ ] Manipulación dinámica del DOM
+ - [x] Uso de selectores del DOM
+ - [x] Manejo de eventos del DOM (listeners, propagación, delegación)
+ - [x] Manipulación dinámica del DOM
  - JavaScript
- - [ ] Tipos de datos primitivos
- - [ ] Strings (cadenas de caracteres)
- - [ ] Variables (declaración, asignación, ámbito)
- - [ ] Uso de condicionales (if-else, switch, operador ternario, lógica booleana)
- - [ ] Uso de bucles/ciclos (while, for, for..of)
- - [ ] Funciones (params, args, return)
- - [ ] Pruebas unitarias (unit tests)
+ - [x] Tipos de datos primitivos
+ - [x] Strings (cadenas de caracteres)
+ - [x] Variables (declaración, asignación, ámbito)
+ - [x] Uso de condicionales (if-else, switch, operador ternario, lógica booleana)
+ - [x] Uso de bucles/ciclos (while, for, for..of)
+ - [x] Funciones (params, args, return)
+ - [x] Pruebas unitarias (unit tests)
  - [ ] Módulos de ECMAScript (ES Modules)
- - [ ] Uso de linter (ESLINT)
+ - [x] Uso de linter (ESLINT)
  - [ ] Uso de identificadores descriptivos (Nomenclatura y Semántica)
  - Control de Versiones (Git y GitHub)
- - [ ] Git: Instalación y configuración
- - [ ] Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)
+ - [x] Git: Instalación y configuración
+ - [x] Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)
  - [ ] GitHub: Creación de cuenta y repos, configuración de llaves SSH
  - [ ] GitHub: Despliegue con GitHub Pages
  - User-centricity
@@ -112,23 +123,23 @@
 
 * [x] `README.md` incluye info sobre proceso y decisiones de diseño.
 * [x] `README.md` explica claramente quiénes son los usuarios y su relación con el producto.
-* [ ] `README.md` explica claramente cómo el producto soluciona los problemas/necesidades de los usuarios.
-* [ ] `README.md` (o otro archivo) contiene tu plan de acción - Objetivos que prioritizaste este proyecto.
+* [x] `README.md` explica claramente cómo el producto soluciona los problemas/necesidades de los usuarios.
+* [x] `README.md` (o otro archivo) contiene tu plan de acción - Objetivos que prioritizaste este proyecto.
 * [x] Usa VanillaJS.
 * [x] No utiliza `this`.
 * [x] Implementa `validator.isValid`.
 * [x] Implementa `validator.maskify`.
-* [ ] Pasa linter con configuración provista.
+* [x] Pasa linter con configuración provista.
 * [x] Pasa pruebas unitarias.
 * [x] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un  mínimo del 50% de _branches_.
 * [x] Interfaz permite escribir un número para ser validado.
-* [ ] Interfaz muestra el resultado de la validación correctamente.
+* [x] Interfaz muestra el resultado de la validación correctamente.
 * [x] Interfaz oculta todos los números escritos excepto los 4 últimos
 
 ### Parte Opcional: "Hacker edition"
 
-* [ ] Implementa `validator.getIssuer`.
-* [ ] Interfaz muestra la franquicia de la tarjeta
+* [x] Implementa `validator.getIssuer`.
+* [x] Interfaz muestra la franquicia de la tarjeta
 
 
 
