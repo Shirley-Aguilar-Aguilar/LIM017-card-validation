@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header >
+      <h1> COLDPLAY </h1>
+      <h3>en Perú</h3>
+    </header>
+    
+    <section id="firstPage" >
+       <main id="contentFirstPage"> 
+           <h3>18 de Febrero 2022</h3>
+           <h3>8:00pm</h3>
+           <h3>Estadio Nacional</h3>
+           <h3>Concierto exclusivo</h3>
+           <button  id="buttonInput" >Comprar entrada </button>
+       </main>
+       <footer id="nameAutor">Project made by Shirley.B Aguilar</footer>
+       <figure>
+       <img id = "logoVisaMaster" src="logo-visa-mastercard.jpg" alt="">
+      </figure>
+    </section>
+
+    <section id="secondPage" style="display: none;">
+        <main id="contentSecondPage" > 
+          <form id="formu"> 
+            <p class="nameInput">NOMBRES Y APELLIDOS</p>
+            <input id="nameUsuario" class="inputs" placeholder="Ingresa tu nombre , por favor">
+
+           <div>
+            <p class="nameInput">NÚMERO DE TARJETA</p>
+            <input id="creditCardNumber" class="inputs" placeholder="Ingresa tu número de tarjeta">
+           </div>
+
+           <div id="cardValid" class="hiddenMessage" style="display: none;">
+            <p>El número de tarjeta es válido</p>
+           </div>
+
+           <div id="cardNotValid" class="hiddenMessage" style="display: none;">
+            <p>El número de tarjeta no es válido<br>Ingrese número válido.</p>
+           </div>
+
+           <div id="dataNoValid" class="hiddenMessage"  style="display: none;">
+            <p>Ingresar solo números</p>
+           </div>
+
+           <div class="boxTogether">
+            <p class="nameInput">Expiración</p>
+            <input id="endNumber" class="inputs" placeholder="DD/MM/AA">
+           </div>
+
+           <div > 
+            <p class="nameInput">CVV</p>
+            <input id="cvvNumber" class="inputs" placeholder="CVV">
+           </div>
+
+          </form>
+        
+          <button id="buttonNumber" class="botonSmall">Ingresar</button>
+          <button id="buttonClear" class="botonSmall" >Limpiar</button>
+        
+        </main>
+
+      <div class="marcas">
+        <figure id="visa"  style="display: none;">
+          <figcaption>
+            <p class="hiddenMessageSmall" >TARJETA VISA</p>
+          </figcaption>
+          <img class="marcaTarjeta" src="logo-visa.png" alt="">
+          
+        </figure>
+
+        <figure id="masterCard" style="display: none;" >
+          <figcaption>
+            <p class="hiddenMessageSmall" >TARJETA MASTERCARD</p>
+          </figcaption> 
+          <img class="marcaTarjeta" src="master-card.jpg" alt="">
+         
+        </figure>
+
+        <figure id="americanExpress"  style="display: none;">
+          <figcaption>
+            <p class="hiddenMessageSmall">TARJETA AMERICAN EXPRESS</p>
+          </figcaption>
+          <img class="marcaTarjeta" src="logo-American-Express.jpg" alt="">
+          
+        </figure>
+        <div id="invalid"  style="display: none;">
+            <p class="hiddenMessageSmall">Lo sentimos , su número de tarjeta no corresponde a Visa, MasterCard o American Express</p>
+        </div>
+
+      </div>
+      
+      <footer >
+         <figure id="logosCard">
+            <img id = "logoAmericanExpress" class="logo" src="logo-American-Express.jpg" alt="">
+            <img id = "logoVisa" class="logo" src="logo-visa.png" alt="">
+            <img id = "logoMaster" class="logo" src="master-card.jpg" alt="">
+         </figure>
+
+          <img id = "logoPci" class="logo" src="logo-pci.jpg" alt="">
+          
+         <figure id="logosBank">
+          <img id = "logoBva" class="logo" src="logo-bbva.jpg" alt="">
+          <img id = "logoInterbank" class="logo" src="logo-interbank.png" alt="">
+          <img id = "logoBcp" class="logo" src="logo-bcp.png" alt="">
+         </figure>
+       </footer>
+
+   </section>
+
+  <script src="index.js" type="module"></script>
+  </body>
+</html>
