@@ -4,7 +4,7 @@
   }
 
 header{
-    background-image: url('header.webp');
+    background-image: url('../src/header.webp');
     height: 100%;
     width: 100%;
     background-size: cover;
