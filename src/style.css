@@ -4,7 +4,7 @@
   }
 
 header{
-    background-image: url('../header.webp');
+    background-image: url('header.webp');
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -29,7 +29,7 @@ header{
 }
 
 #firstPage{
-    background-image: url('../coldplay_concierto.png');
+    background-image: url('coldplay_concierto.png');
     height: 700px;
     width: 100%;
     background-size: cover;
@@ -68,7 +68,7 @@ button{
 }
  
 #secondPage{
-  background-image: url('../coldplay_concierto.png');
+  background-image: url('coldplay_concierto.png');
   height: 700px;
   width: 100%;
   background-size: cover;
