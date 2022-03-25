@@ -11,7 +11,6 @@ const validator = {
       for (let i = inputAsString.length - 1; i >= 0; i--) {
         var digitoAuxiliar = inputAsString[i];
         result = result + digitoAuxiliar;
-        console.log(result);
       }
       return parseInt(result);
     }
@@ -27,9 +26,7 @@ const validator = {
 
         //encontrar los números en las posiciones pares
         if (i % 2 !== 0) {
-          console.log("inputAsString[i] tiene posición par y  su valor es: " + digitoAuxiliar);
           var doubleNumber = digitoAuxiliar * 2; // multiplicar los pares
-          console.log("digitouxiliar multiplicado *2 es: " + doubleNumber);
 
           //sumar los digitos multiplicados mayores a 10
           if (doubleNumber >= 10) {
@@ -58,14 +55,11 @@ const validator = {
     var reversedNumber = reverseNumber(creditCardNumber);
     var encodedNumber = applyLogicForEvenNumbers(reversedNumber);
     var sumatoriaCifras = getSummOfNumbers(encodedNumber);
-    console.log("la sumatoria de cifras es: " + sumatoriaCifras);
 
     //validar suma total
     var finalResult = sumatoriaCifras % 10 === 0;
-    console.log(finalResult);
 
-    return finalResult;
-    
+    return finalResult; 
   },
   // OCULTAR TODOS LOS INDICES MENOS LOS 4 ÚTIMOS .
 
@@ -99,7 +93,6 @@ const validator = {
       const VALID_NUMBER_VISA = 4 ;
       const VALID_NUMBER_MASTERCARD = 5 ;
 
-      
       // obtener el 1 numero de la tarjeta y la cantidad de numeros
       let firstNumberFromCard = parseInt(creditCardNumber.toString()[0]);
       let digitQuantity = parseInt(creditCardNumber.toString().length);
@@ -111,7 +104,7 @@ const validator = {
           if (firstNumberFromCard === VALID_NUMBER_VISA){
              result = "visa";
           }
-           else if(firstNumberFromCard === VALID_NUMBER_MASTERCARD) {
+          if(firstNumberFromCard === VALID_NUMBER_MASTERCARD) {
               result = "mastercard";
             }
            

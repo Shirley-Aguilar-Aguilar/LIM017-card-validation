@@ -5,9 +5,6 @@ function eventSecondPage(){
     document.getElementById("secondPage").style.display= "block";//mostrar página  
 }
 
-let buttonInput= document.getElementById("buttonInput");
-buttonInput.addEventListener("click", eventSecondPage); //registrar evento click
-
 //validar que número de tarjeta sea solo número
 function onlyNumbers(input){
    //este regex valida que solo existan numeros
@@ -18,7 +15,6 @@ function onlyNumbers(input){
 
 function manageOnlyNumbersValidation() {  
    let creditCardNumberValue= document.getElementById("creditCardNumber").value; 
-   console.log("que cosa capturamos: " + creditCardNumberValue);
    //si el numero de tarjeta no hace match con el regex de solo numeros
    if (creditCardNumberValue !== '') {
       if(!onlyNumbers(creditCardNumberValue)) {
@@ -26,11 +22,7 @@ function manageOnlyNumbersValidation() {
       }
    }
 }
-
-let creditCardNumber= document.getElementById("creditCardNumber");
-creditCardNumber.addEventListener("input", manageOnlyNumbersValidation);
-
-      
+    
  //datos  obstenidos del usuario
 function inputNumber(){   
    document.getElementById("dataNoValid").style.display= "none";
@@ -83,9 +75,6 @@ function inputNumber(){
    } 
 }
 
-let buttonNumber= document.getElementById("buttonNumber");
-buttonNumber.addEventListener("click",inputNumber) ;
-
 //limpiar datos
 function clearData(){
    document.getElementById("formu").reset();
@@ -97,6 +86,15 @@ function clearData(){
    document.getElementById("masterCard").style.display= "none";
    document.getElementById("invalid").style.display= "none";
 }
+
+let buttonInput= document.getElementById("buttonInput"); //seleccionar botón
+buttonInput.addEventListener("click", eventSecondPage); //registro de evento
+
+let creditCardNumber= document.getElementById("creditCardNumber");
+creditCardNumber.addEventListener("input", manageOnlyNumbersValidation);
+
+let buttonNumber= document.getElementById("buttonNumber");
+buttonNumber.addEventListener("click",inputNumber) ;
 
 let buttonClear= document.getElementById("buttonClear");
 buttonClear.addEventListener("click",clearData) ;
