@@ -8,9 +8,11 @@
   }
 
 header{
-    background-image: linear-gradient(to top right, #1D4350, #A43931);
+    background-image: url("./img/diseno-fondo.webp");
     width: 100%;
-    background-position: center ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size: 70px;
@@ -31,10 +33,10 @@ header{
 }
 
 #firstPage{
-    background-image: url('1366_2000.jpg');
-    width: 100%;
+    background-image: url("./img/coldplay.png");
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #contentFirstPage{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -67,12 +69,11 @@ button{
 }
  
 #secondPage{
-  background-image: url('1366_2000.jpg');
-  height: 700px;
-  width: 100%;
-  background-size: cover;
+  background-image: url("./img/coldplay.png");
   background-position: center;
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 #contentSecondPage{
   margin-left: 720px;
